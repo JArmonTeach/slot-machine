@@ -40,6 +40,50 @@ symbol_count_reel_three = {
     "H": 4
 }
 
+def get_slot_machine_spin(rows, cols, symbols):
+    reel_one_symbols = []
+    for symbol, symbol_count_reel_one in symbols.items():
+        for _ in range(symbol_count_reel_one):
+            reel_one_symbols.append(symbol)
+
+    reel_two_symbols = []
+    for symbol, symbol_count_reel_two in symbols.items():
+        for _ in range(symbol_count_reel_two):
+            reel_two_symbols.append(symbol)
+
+    reel_three_symbols = []
+    for symbol, symbol_count_reel_three in symbols.items():
+        for _ in range(symbol_count_reel_three):
+            reel_three_symbols.append(symbol)
+
+    columns = []
+    
+    column_one = []
+    current_symbols_from_one = reel_one_symbols[:]
+    for _ in range(rows):
+        value_one = random.choice(current_symbols_from_one)
+        current_symbols_from_one.remove(value_one)
+        column_one.append(value_one)
+    columns.append(column_one)
+
+    column_two = []
+    current_symbols_from_two = reel_two_symbols[:]
+    for _ in range(rows):
+        value_two = random.choice(current_symbols_from_two)
+        current_symbols_from_two.remove(value_two)
+        column_two.append(value_two)
+    columns.append(column_two)
+    
+    column_three = []
+    current_symbols_from_three = reel_three_symbols[:]
+    for _ in range(rows):
+        value_three = random.choice(current_symbols_from_three)
+        current_symbols_from_three.remove(value_three)
+        column_three.append(value_three)
+    columns.append(column_three)
+
+    return columns
+
 def deposit():
     while True:
         amount = input("Enter amount to be deposited: $")
