@@ -1,7 +1,44 @@
-#video 18:15
+import random
+
 MAX_LINES = 3
 MAX_BET = 100
 MIN_BET = 1
+
+ROWS = 3
+COLS = 3
+
+symbol_count_reel_one = {
+    "A": 1, 
+    "B": 3,
+    "C": 2,
+    "D": 1, 
+    "E": 7,
+    "F": 5,
+    "G": 2, 
+    "H": 0
+}
+
+symbol_count_reel_two = {
+    "A": 1, 
+    "B": 2,
+    "C": 2,
+    "D": 5, 
+    "E": 3,
+    "F": 5,
+    "G": 6, 
+    "H": 0
+}
+
+symbol_count_reel_three = {
+    "A": 1, 
+    "B": 1,
+    "C": 2,
+    "D": 8, 
+    "E": 3,
+    "F": 4,
+    "G": 0, 
+    "H": 4
+}
 
 def deposit():
     while True:
