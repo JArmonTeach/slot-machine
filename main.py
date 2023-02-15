@@ -40,19 +40,19 @@ symbol_count_reel_three = {
     "H": 4
 }
 
-def get_slot_machine_spin(rows, cols, symbols):
+def get_slot_machine_spin(rows, cols, symbols_one, symbols_two, symbols_three):
     reel_one_symbols = []
-    for symbol, symbol_count_reel_one in symbols.items():
+    for symbol, symbol_count_reel_one in symbols_one.items():
         for _ in range(symbol_count_reel_one):
             reel_one_symbols.append(symbol)
 
     reel_two_symbols = []
-    for symbol, symbol_count_reel_two in symbols.items():
+    for symbol, symbol_count_reel_two in symbols_two.items():
         for _ in range(symbol_count_reel_two):
             reel_two_symbols.append(symbol)
 
     reel_three_symbols = []
-    for symbol, symbol_count_reel_three in symbols.items():
+    for symbol, symbol_count_reel_three in symbols_three.items():
         for _ in range(symbol_count_reel_three):
             reel_three_symbols.append(symbol)
 
@@ -152,7 +152,8 @@ def main():
 
     print(f"You are betting ${bet} on {lines} lines. Total bet is equal to ${total_bet}")
     
-    slots = get_slot_machine_spin(ROWS, COLS, symbol_count_reel_one) #TODO: check how to split the count and value to each spinner
+    slots = get_slot_machine_spin(ROWS, COLS, symbol_count_reel_one, symbol_count_reel_two, symbol_count_reel_three) 
+    
     print_slot_machine(slots)
 
 
