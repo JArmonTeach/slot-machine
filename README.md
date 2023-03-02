@@ -5,7 +5,7 @@ Python 3.8.5 Slot Machine Program
 
 ## Table of Contents
 
-## Instalation
+## Installation
 
 ## Usage
 
