@@ -20,7 +20,14 @@ Install Python interpreter:
 Run Python code.
 
 ## Usage
-FIX: When the program is started it prompts the user to enter an input for an amount to be deposited. The program will ask for another input for how many lines the user would like to bet on and how much money they would like to bet on those lines. The lines are then generated and the winnings, the winning lines and the current balance are displayed.
+    1. Enter numerical value to be deposited
+    2. A current balance will be display. Either press enter to play or 'q' to quit
+    3. Enter number of lines that will be bet on between 1-3
+    4. Enter the amount of money that will be bet on each of the line(s)
+    5. A summary of the betting amount on the number of lines chosen and the total bet will be displayed.
+    6. The lines and their symbols will be displayed, along with the user's winnings, winning lines and current balance.
+    7. Either press enter to keep playing or 'q' to quit.
+
 ## Credits
 
 ## License 
